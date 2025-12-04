@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>A44 Company – Engineering & Digital Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A44 Company provides specialist control systems, hybrid traction, embedded software and digital tools consultancy through A44 Engineering and A44 Digital Solutions." />
+  <style>
+    :root {
+      --bg: #05060A;
+      --fg: #FFFFFF;
+      --fg-soft: #E0E0E0;
+      --accent: #D9791B;
+      --muted: #888888;
+      --card: #111320;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg-soft);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding: 1.5rem 0 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 4px;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--fg);
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    nav {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    nav a {
+      margin-left: 1.2rem;
+    }
+
+    .hero-main {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
+      gap: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      color: var(--fg);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 640px;
+    }
+
+    .hero-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--fg);
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: transparent;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #020203;
+      border-color: var(--accent);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .hero-side {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-side strong {
+      color: var(--fg);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h3 {
+      font-size: 1.3rem;
+      color: var(--fg);
+      margin-bottom: 0.4rem;
+    }
+
+    section h4 {
+      font-size: 1rem;
+      color: var(--fg);
+      margin-top: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .pill {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      padding: 0.18rem 0.65rem;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--fg-soft);
+      margin-bottom: 0.6rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-top: 1rem;
+    }
+
+    ul {
+      margin: 0.2rem 0 0.5rem 1.1rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.15rem;
+    }
+
+    .columns-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .contact-block {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid #222533;
+      padding: 1rem 0 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .downloads-list {
+      margin-top: 0.6rem;
+    }
+
+    .downloads-list a {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero-main {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        margin-top: 0.75rem;
+      }
+
+      nav a {
+        margin-left: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-row">
+        <div class="logo-block">
+          <!-- Replace src with your actual logo path -->
+          <img src="assets/a44-logo.png" alt="A44 Company logo" class="logo-img" />
+          <div>
+            <div class="logo-text">A44 COMPANY</div>
+            <div class="tagline">A44 Engineering &amp; A44 Digital Solutions</div>
+          </div>
+        </div>
+        <nav>
+          <a href="#engineering">Engineering</a>
+          <a href="#digital">Digital</a>
+          <a href="#experience">Experience</a>
+          <a href="#documents">Documents</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="hero hero-main">
+        <div>
+          <h1>Controls, Software & Hybrid Systems Consultancy</h1>
+          <h2>Principal Consultant – Ash Radford</h2>
+          <p>
+            A44 Company provides specialist <strong>control systems, hybrid traction and embedded software</strong> expertise
+            through A44 Engineering, alongside modern <strong>web, tooling and AI-powered solutions</strong> through A44 Digital Solutions.
+          </p>
+          <div class="hero-buttons">
+            <a href="#engineering" class="btn btn-primary">Explore A44 Engineering</a>
+            <a href="#digital" class="btn">Explore A44 Digital</a>
+            <a href="#contact" class="btn">Contact</a>
+          </div>
+        </div>
+        <div class="hero-side">
+          <p><strong>Based in Staffordshire, UK</strong><br/>Remote-first, working across the UK and Europe.</p>
+          <p style="margin-top:0.8rem;">
+            <strong>Email:</strong> <a href="mailto:ash@A44Company.co.uk">ash@A44Company.co.uk</a><br/>
+            <strong>Phone:</strong> 07305 281183
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="engineering">
+      <span class="pill">A44 Engineering</span>
+      <h3>Control Systems & Hybrid Platforms</h3>
+      <p>
+        A44 Engineering specialises in safety-conscious control systems, hybrid traction and embedded software for complex machines.
+      </p>
+      <div class="card">
+        <h4>Core capabilities</h4>
+        <ul>
+          <li>IQAN MC43/MD4 architecture and logic development</li>
+          <li>Hybrid traction logic, HV bus &amp; inverter control</li>
+          <li>BMS logic – SoC estimation, thermal &amp; protection</li>
+          <li>CAN J1939 frameworks, diagnostics &amp; DBC design</li>
+          <li>HMI/UI development (Qt, MD4/MD5)</li>
+          <li>System-level debugging, EMC/CAN noise investigation</li>
+        </ul>
+
+        <h4>Industries</h4>
+        <ul>
+          <li>Hybrid/Electric locomotives</li>
+          <li>Off-highway &amp; agricultural machinery</li>
+          <li>Industrial automation &amp; hydraulics</li>
+          <li>EV/Hybrid R&amp;D platforms</li>
+          <li>Robotics &amp; prototype systems</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="digital">
+      <span class="pill">A44 Digital Solutions</span>
+      <h3>Software, Web &amp; AI-Driven Tools</h3>
+      <p>
+        A44 Digital Solutions builds modern software and AI-powered tools that support engineering workflows and SME operations.
+      </p>
+      <div class="card columns-2">
+        <div>
+          <h4>What we build</h4>
+          <ul>
+            <li>Websites &amp; full-stack web applications</li>
+            <li>Internal dashboards, portals and tools</li>
+            <li>Electron-based desktop apps for engineering teams</li>
+            <li>Automation and workflow systems</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tech &amp; AI</h4>
+          <ul>
+            <li>React, TypeScript, Node.js, Electron</li>
+            <li>REST APIs, JSON/YAML schema workflows</li>
+            <li>ChatGPT/OpenAI API integrations</li>
+            <li>AI-assisted development &amp; documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <span class="pill">Selected Experience</span>
+      <h3>Engineering &amp; Digital Delivery</h3>
+      <div class="card">
+        <h4>Clayton Equipment – Hybrid Locomotive Control</h4>
+        <p>Multi-ECU IQAN architecture, traction logic, HV bus control and BMS strategy for hybrid locomotives.</p>
+
+        <h4>TAFE – Hybrid Tractor VCU Development</h4>
+        <p>Traction, PTO, steering and BMS control logic for a hybrid tractor platform.</p>
+
+        <h4>AVL – BMS &amp; Hybrid Powertrain Integration</h4>
+        <p>BMS control logic, HV system integration and diagnostic tooling.</p>
+
+        <h4>JCB – Electric Teletruk</h4>
+        <p>ECU control system, HMI behaviour and CAN J1939 communications for production EV equipment.</p>
+      </div>
+    </section>
+
+    <section id="documents">
+      <span class="pill">Documents</span>
+      <h3>A44 Company Documents</h3>
+      <p>You can download key A44 Company documents here:</p>
+      <div class="card downloads-list">
+        <!-- Update href paths to match your Netlify deployment structure -->
+        <a href="docs/A44_Contractor_Profile.pdf" target="_blank">Contractor Profile</a>
+        <a href="docs/A44_Contractor_CV.pdf" target="_blank">Contractor CV</a>
+        <a href="docs/A44_Rate_Card.pdf" target="_blank">Rate Card</a>
+        <a href="docs/A44_Services_Menu.pdf" target="_blank">Services Menu</a>
+        <a href="docs/A44_Terms_of_Engagement.pdf" target="_blank">Terms of Engagement</a>
+        <a href="docs/A44_Invoicing_Rhythm.pdf" target="_blank">Invoicing Rhythm</a>
+        <a href="docs/A44_How_to_Work_With_A44_Company.pdf" target="_blank">How to Work With A44 Company</a>
+      </div>
+    </section>
+
+    <section id="how-we-work">
+      <span class="pill">How A44 Works</span>
+      <h3>Engagement &amp; Delivery</h3>
+      <div class="card columns-2">
+        <div>
+          <h4>Engagement</h4>
+          <ul>
+            <li>Scope agreed in writing before work begins</li>
+            <li>Clear deliverables, expectations and boundaries</li>
+            <li>Remote-first consultancy, Outside IR35</li>
+          </ul>
+          <h4>Delivery Model</h4>
+          <ul>
+            <li>Weekly invoicing, Net 14 terms</li>
+            <li>Engineering &amp; Digital billed separately</li>
+            <li>Structured documentation &amp; technical handover</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Working Style</h4>
+          <ul>
+            <li>Autonomous, minimal oversight required</li>
+            <li>AI-accelerated workflows for faster delivery</li>
+            <li>Focus on clarity, reliability and maintainability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <span class="pill">Contact</span>
+      <h3>Let’s talk about your project</h3>
+      <p>
+        For contract availability, project discussions or consulting engagements, get in touch:
+      </p>
+      <div class="contact-block">
+        <p><strong>Email:</strong> <a href="mailto:ash@A44Company.co.uk">ash@A44Company.co.uk</a></p>
+        <p><strong>Phone:</strong> 07305 281183</p>
+        <p><strong>Location:</strong> Staffordshire, UK (remote work across the UK &amp; EU)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    A44 Company • A44 Engineering &amp; A44 Digital Solutions • A44Company.co.uk
+  </footer>
+</body>
+</html>
