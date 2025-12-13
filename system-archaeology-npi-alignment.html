@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>System Archaeology & NPI Alignment | A44 Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A44 Company provides a technical service to reconstruct system reality from existing deliverables and align it against your NPI/V-model expectations. Clear system maps, ranked risks, and actionable recommendations." />
+  <style>
+    :root {
+      --bg: #05060A;
+      --fg: #FFFFFF;
+      --fg-soft: #E0E0E0;
+      --accent: #D9791B;
+      --muted: #888888;
+      --card: #111320;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg-soft);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding: 1.5rem 0 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-block { display: flex; align-items: center; gap: 0.75rem; }
+
+    .logo-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 4px;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--fg);
+    }
+
+    .tagline { font-size: 0.9rem; color: var(--muted); }
+
+    nav { font-size: 0.85rem; color: var(--muted); }
+    nav a { margin-left: 1.2rem; }
+
+    .hero-main {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.5fr);
+      gap: 2.5rem;
+    }
+
+    .hero h1 { font-size: 2.1rem; color: var(--fg); margin-bottom: 0.5rem; }
+    .hero h2 { font-size: 1.1rem; font-weight: 500; color: var(--muted); margin-bottom: 1rem; }
+    .hero p { max-width: 640px; }
+
+    .hero-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--fg);
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: transparent;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #020203;
+      border-color: var(--accent);
+    }
+
+    .btn:hover { opacity: 0.9; }
+
+    .hero-side { font-size: 0.9rem; color: var(--muted); }
+    .hero-side strong { color: var(--fg); }
+
+    section { margin-bottom: 2.5rem; }
+
+    section h3 { font-size: 1.3rem; color: var(--fg); margin-bottom: 0.4rem; }
+    section h4 { font-size: 1rem; color: var(--fg); margin-top: 0.9rem; margin-bottom: 0.2rem; }
+
+    .pill {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      padding: 0.18rem 0.65rem;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--fg-soft);
+      margin-bottom: 0.6rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-top: 1rem;
+    }
+
+    ul { margin: 0.2rem 0 0.5rem 1.1rem; padding-left: 0; }
+    ul li { margin-bottom: 0.15rem; }
+
+    .columns-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .contact-block { margin-top: 1rem; font-size: 0.95rem; }
+
+    footer {
+      border-top: 1px solid #222533;
+      padding: 1rem 0 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* New: section index / on-page navigation */
+    .section-index {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .section-index a { margin-right: 0.9rem; white-space: nowrap; }
+    .section-index span { margin-right: 0.9rem; color: #444; }
+
+    @media (max-width: 800px) {
+      .hero-main { grid-template-columns: 1fr; }
+      nav { margin-top: 0.75rem; }
+      nav a { margin-left: 0.75rem; }
+      .section-index a, .section-index span { display: inline-block; margin-bottom: 0.35rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-row">
+        <div class="logo-block">
+          <img src="assets/a44-logo.png" alt="A44 Company logo" class="logo-img" />
+          <div>
+            <div class="logo-text">A44 COMPANY</div>
+            <div class="tagline">A44 Engineering &amp; A44 Digital Solutions</div>
+          </div>
+        </div>
+        <nav>
+          <a href="index.html#engineering">Engineering</a>
+          <a href="index.html#digital">Digital</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#documents">Documents</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="hero hero-main">
+        <div>
+          <span class="pill">A44 Engineering</span>
+          <h1>System Archaeology &amp; NPI Alignment</h1>
+          <h2>Clarity, risk visibility and decision support for complex engineering systems</h2>
+
+          <p>
+            Engineering programmes often carry hidden risk: the system behaves one way, the documentation describes another,
+            and critical knowledge lives in a small number of people. This service helps you understand what has actually been built,
+            show inconsistencies across project deliverables, and align the current reality against your own development process.
+          </p>
+
+          <p style="margin-top:0.8rem;">
+            The outcome is a clear set of outputs: a practical system map, a ranked risk register, and recommendations that support
+            delivery decisions and reduce late rework.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="mailto:ash@A44Company.co.uk?subject=System%20Archaeology%20%E2%80%93%20Scoping%20Call" class="btn btn-primary">Request a scoping call</a>
+            <a href="#deliverables" class="btn">What you receive</a>
+            <a href="#when-useful" class="btn">When this is useful</a>
+            <a href="index.html" class="btn">Back to home</a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <p><strong>What it is not</strong><br/>Not an audit. Not certification. Not a blame exercise.</p>
+          <p style="margin-top:0.8rem;">
+            <strong>Based in Staffordshire, UK</strong><br/>Remote-first, working across the UK and Europe.
+          </p>
+          <p style="margin-top:0.8rem;">
+            <strong>Email:</strong> <a href="mailto:ash@A44Company.co.uk">ash@A44Company.co.uk</a><br/>
+            <strong>Phone:</strong> 07305 281183
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="overview">
+      <span class="pill">Overview</span>
+      <h3>Why this matters to your business</h3>
+      <p>
+        Delivery risk often comes from uncertainty: uncertainty about how the system behaves, which assumptions it relies on,
+        and whether teams share the same understanding. When that uncertainty is left unresolved, problems appear late as integration
+        delays, rework, and “unexpected” test failures.
+      </p>
+      <div class="card">
+        <h4>Common symptoms</h4>
+        <ul>
+          <li>System behaviour differs from what stakeholders believe is implemented.</li>
+          <li>Project deliverables (software, wiring, CAN, documents) do not align cleanly.</li>
+          <li>Test evidence exists but does not clearly support readiness decisions.</li>
+          <li>Critical knowledge is concentrated in one or two people.</li>
+          <li>Development process gates exist, but the resulting deliverables are inconsistent.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="what-it-is">
+      <span class="pill">Scope</span>
+      <h3>What this service is (and is not)</h3>
+      <p>
+        This service is delivered by a senior controls and software engineer with experience across engineering leadership,
+        project delivery, and structured development processes for complex systems. The focus is clarity and risk visibility,
+        using an evidence-first approach that supports decision-making.
+      </p>
+
+      <div class="card columns-2">
+        <div>
+          <h4>This service is</h4>
+          <ul>
+            <li>Technical discovery and reconstruction</li>
+            <li>Risk surfacing with an evidence trail</li>
+            <li>Decision support for engineering leadership</li>
+            <li>Practical, prioritised recommendations</li>
+          </ul>
+        </div>
+        <div>
+          <h4>This service is not</h4>
+          <ul>
+            <li>Compliance audit or certification activity</li>
+            <li>Safety sign-off or formal assurance</li>
+            <li>A documentation exercise for its own sake</li>
+            <li>A performance review of individuals</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <span class="pill">Method</span>
+      <h3>How the service works</h3>
+      <p>
+        The service first establishes what your organisation expects to exist. Then reconstructs what
+        currently exists and highlights where reality drifts.
+      </p>
+
+      <div class="card">
+        <h4>1) NPI Reality Check</h4>
+        <p>
+          We review your stated NPI / V-model (or equivalent) to extract expected stages, deliverables, and governance assumptions.
+          The output is a simple reference map used to align the as-built view.
+        </p>
+
+        <h4>2) System Archaeology</h4>
+        <p>
+          We reconstruct the system as it currently exists using the materials and deliverables already produced across the project
+          (software, control logic, CAN, wiring/I/O, documentation, test notes). We identify hidden assumptions, inconsistencies across
+          deliverables, and areas where evidence is missing.
+        </p>
+
+        <h4>3) Engineering judgement</h4>
+        <p>
+          Automated summarisation can help accelerate review. It cannot replace judgement. Findings are prioritised using practical systems
+          engineering experience and a focus on delivery risk.
+        </p>
+      </div>
+    </section>
+
+    <section id="inputs">
+      <span class="pill">Inputs</span>
+      <h3>What we work with</h3>
+      <p>
+        The service works with whatever information and materials are currently available. The aim is to build clarity from the current
+        state and provide outputs you can act on.
+      </p>
+
+      <div class="card columns-2">
+        <div>
+          <h4>Process / governance (NPI Reality Check)</h4>
+          <ul>
+            <li>NPI / V-model documents (or internal lifecycle description)</li>
+            <li>Gate definitions and expected deliverables</li>
+            <li>Templates: requirements, design, test, reviews (if used)</li>
+            <li>Change control / release approach (even if informal)</li>
+            <li>Definition of “done” / readiness criteria (if defined)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Technical materials (System Archaeology)</h4>
+          <ul>
+            <li>Control software / logic exports (as applicable)</li>
+            <li>CAN materials (DBC, spreadsheets, signal lists)</li>
+            <li>Wiring tables, I/O lists, pin maps</li>
+            <li>Architecture diagrams (even if out of date)</li>
+            <li>Test notes, commissioning notes, known issues list</li>
+            <li>Release notes / version history (if available)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="deliverables">
+      <span class="pill">Outputs</span>
+      <h3>What you receive</h3>
+      <p>
+        Outputs are designed to be decision-grade: clear enough to brief leadership, onboard an engineer, and prioritise actions.
+      </p>
+
+      <div class="card columns-2">
+        <div>
+            <h4>1) As-built System Reality Map</h4>
+            <ul>
+                <li>Functional behaviour and operating modes</li>
+                <li>Interfaces and dependencies (CAN, I/O, external subsystems)</li>
+                <li>Key assumptions annotated with evidence sources</li>
+            </ul>
+        
+        
+
+            <h4>2) Alignment Summary (process vs reality)</h4>
+            <ul>
+                <li>Expected deliverables vs available deliverables</li>
+                <li>Key inconsistencies and drift by lifecycle stage</li>
+                <li>Where governance assumptions are not met in practice</li>
+            </ul>
+        </div>
+        <div>
+            <h4>3) Ranked Risk Register</h4>
+            <ul>
+                <li>Technical, integration, and process risks</li>
+                <li>Severity / likelihood with confidence notes</li>
+                <li>Suggested mitigations and practical next actions</li>
+            </ul>
+        
+
+            <h4>4) Recommendations &amp; next steps</h4>
+            <ul>
+                <li>Immediate actions vs medium-term improvements</li>
+                <li>30/60/90 day prioritised plan</li>
+                <li>Optional implementation support (engineering delivery)</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="when-useful">
+      <span class="pill">Use cases</span>
+      <h3>When this is useful</h3>
+      <div class="card">
+        <ul>
+          <li>Before major integration, commissioning, or acceptance testing</li>
+          <li>When inheriting a legacy platform or an acquired system</li>
+          <li>When key engineers have left (or knowledge is concentrated)</li>
+          <li>When defects are hard to reproduce and root-cause</li>
+          <li>When you need confidence before scaling a platform</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="service-delivery">
+      <span class="pill">Delivery</span>
+      <h3>How it’s delivered</h3>
+      <p>
+        This service is delivered with minimal disruption to your teams. It is structured, focused, and designed to produce clear outputs quickly, without extended workshops or unnecessary overheads.
+      </p>
+      <div class="card columns-2">
+        <div>
+          <h4>Service steps</h4>
+          <ul>
+            <li>Short scoping call and boundary definition</li>
+            <li>NPI Reality Check and reference deliverables map</li>
+            <li>System review and evidence-based synthesis</li>
+            <li>Outputs pack + walkthrough with stakeholders</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Working style</h4>
+          <ul>
+            <li>Autonomous, minimal oversight required</li>
+            <li>Short checkpoints to validate understanding</li>
+            <li>Focus on clarity, reliability and maintainability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo-content">
+      <span class="pill">Demonstration</span>
+      <h3>Service overview and explainer material</h3>
+      <p>
+        Professional overview videos are available to explain the service and its outputs. These use illustrative, anonymised examples and do not include proprietary code, data, or client identifiers.
+      </p>
+      <div class="card">
+        <h4>What the overview covers</h4>
+        <ul>
+          <li>The service (NPI Reality Check + System Archaeology)</li>
+          <li>Examples of misalignment between project deliverables and system behaviour</li>
+          <li>Example system map and risk register format</li>
+          <li>How decisions become simpler when reality is clear</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <span class="pill">Contact</span>
+      <h3>Book a short call</h3>
+      <p>
+        If delivery risk is present but hard to name, this service is designed to make it visible and manageable.
+        Get in touch for a short scoping call.
+      </p>
+      <div class="contact-block">
+        <p><strong>Email:</strong> <a href="mailto:ash@A44Company.co.uk?subject=System%20Archaeology%20%E2%80%93%20Scoping%20Call">ash@A44Company.co.uk</a></p>
+        <p><strong>Phone:</strong> 07305 281183</p>
+        <p><strong>Location:</strong> Staffordshire, UK (remote work across the UK &amp; EU)</p>
+        <p style="margin-top:0.6rem;">
+          <a href="index.html" class="btn">Back to home</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    A44 Company • A44 Engineering &amp; A44 Digital Solutions • A44Company.co.uk
+  </footer>
+</body>
+</html>
